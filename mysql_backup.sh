@@ -22,3 +22,7 @@ fi
 
 
 find /backup -maxdepth 1 -name "*sql.gz" -mtime +5 -exec rm -f {} \;
+
+if [ $(cat /tmp/mail | wc -l) > 9 ]; then
+ sed -i '5d' mail
+fi
