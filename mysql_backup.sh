@@ -5,7 +5,7 @@ PASS=pass
 DB=`mysql -u $USER -p$PASS -e 'show databases;' | grep bitrix`
 OPT="--quick --insert-ignore --skip-lock-tables --single-transaction=TRUE"
 DEST=/backup
-DATE=`date +%Y-%m-%d-%H-%M`
+DATE=`date +%F`
 
 for i in $DB;
 do
